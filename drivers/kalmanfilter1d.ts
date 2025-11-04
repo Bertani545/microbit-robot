@@ -42,7 +42,7 @@ namespace robot.drivers {
             const A = this.A
             const C = this.C
             const Q = this.Q
-            if (isNaN(this.x)) {
+            if (isNaN(this.x) || isNaN(this.cov)) {
                 this.x = (1 / C) * z
                 this.cov = (1 / C) * Q * (1 / C)
             } else {
